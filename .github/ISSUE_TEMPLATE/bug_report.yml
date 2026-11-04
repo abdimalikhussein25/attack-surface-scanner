@@ -29,4 +29,4 @@ body:
       placeholder: OS, runtime version, package version
   - type: markdown
     attributes:
-      value: "**Security issue?** Please don't open a public issue — see [SECURITY.md](../blob/main/SECURITY.md)."
+      value: "**Security issue?** Please don't open a public issue. See [SECURITY.md](../blob/main/SECURITY.md)."

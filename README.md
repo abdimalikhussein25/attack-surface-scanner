@@ -1,6 +1,6 @@
 # attack-surface-scanner
 
-**Find what your organisation exposes to the internet — in one command.**
+**Find what your organisation exposes to the internet, in one command.**
 
 `asm-scan` discovers your subdomains from certificate-transparency logs, checks which ones are alive, and flags the things attackers look for first: expired or invalid certificates, sites that don't force HTTPS, missing security headers, version leaks, forgotten `dev`/`staging`/`admin` hosts, and exposed `.git` or `.env` files. You get a clean Markdown report for management and JSON for your pipeline.
 
@@ -62,12 +62,12 @@ The exit code is `1` when there are high-severity findings, so you can fail a sc
 crt.sh (CT logs) ──► subdomains ──► DNS resolve ──► HTTPS / HTTP / TLS probe ──► checks ──► report.md + report.json
 ```
 
-- `asm_scanner/discovery.py` — passive enumeration and concurrent DNS resolution
-- `asm_scanner/probe.py` — HTTP(S) and TLS probing, no redirects followed
-- `asm_scanner/checks.py` — pure functions that turn probe results into findings (fully unit-tested)
-- `asm_scanner/report.py` — Markdown and JSON output
+- `asm_scanner/discovery.py`: passive enumeration and concurrent DNS resolution
+- `asm_scanner/probe.py`: HTTP(S) and TLS probing, no redirects followed
+- `asm_scanner/checks.py`: pure functions that turn probe results into findings (fully unit-tested)
+- `asm_scanner/report.py`: Markdown and JSON output
 
-Pure Python standard library — nothing to install beyond Python itself, which makes it easy to run on a locked-down server.
+Pure Python standard library: nothing to install beyond Python itself, which makes it easy to run on a locked-down server.
 
 ## Roadmap
 
@@ -85,4 +85,4 @@ pytest
 
 ## License
 
-MIT © Abdimalik Salad Hussein — [Fiddo Technology](https://fiddotechnology.com)
+MIT © Abdimalik Salad Hussein · [Fiddo Technology](https://fiddotechnology.com)
